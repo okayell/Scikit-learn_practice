@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 
-# -----------簡單線性迴歸模型 y = a + bX----------------- #
+# ------簡單線性迴歸模型 y = a + bX(只有一個解釋變數)------ #
 
 # 建立 氣溫 與 營業額 陣列資料
 temperatures = np.array([29,28,34,31,
