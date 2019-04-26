@@ -14,11 +14,13 @@ y = target["target"]
 
 Ks =np.arange(1, round(0.2*len(X) + 1 ))
 accuracies = []
+accuracies2 = []
 for k in Ks:
     knn = neighbors.KNeighborsClassifier(n_neighbors=k)
-    scores = cross_val_score(knn,X,y,scoring="accuracy",cv=10)
-    accuracies.append(scores.mean())
+    scores = cross_val_score(knn,X,y,scoring="accuracy",cv=12)
     
+    accuracies.append(scores.mean())
+    accuracies2.append(scores)    
     
 plt.plot(Ks,accuracies)
 plt.show()

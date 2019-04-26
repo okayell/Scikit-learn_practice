@@ -14,7 +14,9 @@ encoded_class = label_encoder.fit_transform(titanic["PClass"])
 
 X = pd.DataFrame([encoded_class,titanic["SexCode"],titanic["Age"]]).T
 y = titanic["Survived"]
-
+print(pd.DataFrame(titanic["Age"]))
+print(pd.DataFrame([encoded_class,titanic["Age"]]))
+'''
 logistic = linear_model.LogisticRegression()
 logistic.fit(X,y)
 print("迴歸係數:", logistic.coef_)
@@ -25,5 +27,5 @@ print(pd.crosstab(preds,titanic["Survived"]))
 
 print((804+265) / (804+185+59+265))
 print(logistic.score(X,y))
-
+'''
 

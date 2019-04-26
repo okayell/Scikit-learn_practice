@@ -22,3 +22,7 @@ print("準確率:", dtree.score(XTest, yTest))
 
 print(dtree.predict(XTest))
 print(yTest.values)
+
+preds = dtree.predict_proba(X=XTest)
+
+print(pd.crosstab(preds[:,1], columns=iris.feature_names))

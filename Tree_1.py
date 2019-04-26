@@ -18,3 +18,6 @@ print("準確率:", dtree.score(XTest, yTest))
 
 preds = dtree.predict_proba(X=XTest)
 print(pd.crosstab(preds[:,0], columns=[XTest["PClass"],XTest["SexCode"]]))
+
+print(dtree.predict(XTest))
+print(yTest.values)
